@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tarea Menú Bootstrap</title>
+    
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body>
+
+    <! 
+          Declaramos una barra de navegación:
+            navbar-expand-sm: Indica que la barra se expandirá en pantallas de tamaño small (sm) o más grandes. En pantallas más pequeñas, el contenido será colapsable.
+            bg-dark: Aplica un fondo oscuro a la barra.
+            navbar-dark: Aplica un esquema de colores claros para el texto en una barra de navegación oscura.
+     >
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+      <! 
+          Contenedor de la barra de navegación:
+            container-fluid: aprovecha el 100% del espacio disponible
+      >
+      <div class="container-fluid">
+        
+        <! 
+          navbar-brand: es el logo o nombre de la marca que aparece en la esquina izquierda de la barra
+          rounded-pill: imagen redondeada
+        >
+        <a class="navbar-brand" href="#"> 
+        <img src="logo.webp" alt="Logo minimalista generado por IA" style="width:40px;" class="rounded-pill"> </a>
+
+        <! Botón para móviles:
+              navbar-toggler: Este botón aparece en pantallas pequeñas y permite que la barra de navegación se colapse (se oculte) o se expanda cuando se hace clic.
+              data-bs-toggle="collapse": Indica que este botón controla un componente colapsable.
+              data-bs-target="#collapsibleNavbar": Apunta al menú (#collapsibleNavbar) que se colapsará o expandirá cuando se pulse el botón.
+              navbar-toggler-icon: Icono del botón de colapso (representado por tres líneas horizontales).
+        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <! bloque colapsable >
+        <div class="collapse navbar-collapse" id="collapsibleNavbar" >
+
+          <!
+              Una lista desordenada (ul) que contiene los elementos (li) del menú de navegación.
+          >
+          <ul class="navbar-nav">
+            
+            <!
+                nav-item dropdown: elemento de la lista desplegable
+                nav-link dropdown-toggle: enlace que al ser pulsado despliega el menú 
+                data-bs-toggle="dropdown": indica que este botón controla un componente dropdown
+            >
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">España</a>
+              
+              <!
+                 dropdown-menu: Contiene los elementos del menú desplegable
+                 data-bs-theme="dark": Establece el tema oscuro para los elementos del dropdown
+              >
+              <ul class="dropdown-menu" data-bs-theme="dark">
+           
+                <!
+                    dropdown-item: es un enlace dentro del menú desplegable.  
+                >
+                <li><a class="dropdown-item" href="#" role="button" data-bs-toggle="dropdown">Asturias</a></li>
+                <li><a class="dropdown-item" href="#" role="button" data-bs-toggle="dropdown">Andalucía</a></li>
+                <li><a class="dropdown-item" href="#" role="button" data-bs-toggle="dropdown">Madrid</a></li>
+           
+              </ul>
+            
+            </li>
+            
+            <li class="nav-item"><a class="nav-link">Economía</a></li>
+            <li class="nav-item"><a class="nav-link">Tecnología</a></li>		
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Deportes</a>
+            
+              <ul class="dropdown-menu" data-bs-theme="dark">
+           
+                <li><a class="dropdown-item" href="#" role="button" data-bs-toggle="dropdown">Fútbol</a></li>
+                <li><a class="dropdown-item" href="#" role="button" data-bs-toggle="dropdown">Baloncesto</a></li>
+           
+              </ul>
+            
+            </li>		
+          </ul>
+
+        </div>
+      </div>
+      </nav>
+   </body>
+</html>
